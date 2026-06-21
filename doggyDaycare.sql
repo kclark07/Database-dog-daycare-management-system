@@ -1,4 +1,4 @@
-DROP TABLE IF EXISTS `doggy_daycare`;
+DROP DATABASE IF EXISTS `doggy_daycare`;
 CREATE DATABASE `doggy_daycare`;
 USE `doggy_daycare`;
 
@@ -18,7 +18,7 @@ CREATE TABLE `dogs` (
   -- Large (56+), Medium (23-55) ,Small (1-22) -- 
 
   PRIMARY KEY (`dog_id`)
-) ENGINE=InnoDB AUTO_INCREMENT= 28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT= 28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `dogs` VALUES (1, 1, 'Ace', 'German Shepard', 3, 'Male', 'Large', 75, NULL);
 INSERT INTO `dogs` VALUES (2, 2, 'Chewy', 'Golden Retriever', 6, 'Male', 'Large', 68, 'Chews everything');
 INSERT INTO `dogs` VALUES (3, 4, 'Ajax', 'German Shepard', 1, 'Male', 'Medium', 65, 'Aggressive towards small dogs');
@@ -59,7 +59,7 @@ CREATE TABLE `owners` (
   `phone` varchar(50) DEFAULT NULL,
 
   PRIMARY KEY (`owner_id`)
-) ENGINE=InnoDB AUTO_INCREMENT= 27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT= 27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `owners` VALUES (1,'James', 'Wright', '2880 Nulla St.', 'Rapid City', 'SD', '(605) 563-7401');
 INSERT INTO `owners` VALUES (2,'Mary', 'Smith', '3727 Ullamcorper St.', 'Spearfish', 'SD', '(605) 587-2335');
 INSERT INTO `owners` VALUES (3,'Will', 'Johnson', 'Ap #867-859 Sit Rd', 'Rapid City', 'SD', '(605) 713-8616');
@@ -89,7 +89,7 @@ CREATE TABLE `health_record` (
   `notes`  varchar(100),
 
   PRIMARY KEY (`dog_id`)
-) ENGINE=InnoDB AUTO_INCREMENT= 27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT= 27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `health_record` VALUES (1, 'Yes', 'Yes', 'Chicken', 1, NULL);
 INSERT INTO `health_record` VALUES (2,'Yes', 'Yes', NULL, 2, NULL );
 INSERT INTO `health_record` VALUES (3,'Yes', 'Yes', NULL, 3, NULL );
@@ -130,7 +130,7 @@ CREATE TABLE `vetInfo` (
   `phone` varchar(20) NOT NULL,
 
   PRIMARY KEY (`vet_id`)
-) ENGINE=InnoDB AUTO_INCREMENT= 27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT= 27 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `vetInfo` VALUES (1, 'Dean', 'Falcon', 'All Creatures Veterinary Hospital', '1825 Clear View Ln', 'Rapid City', 'SD', '(605) 342-0052' );
 INSERT INTO `vetInfo` VALUES (2, 'Lynn', 'Irons', 'Noahs Ark Animal Hospital', '1315 Mt Rushmore Rd', 'Rapid City', 'SD', '(605) 343-3225' );
 INSERT INTO `vetInfo` VALUES (3, 'Heidi', 'Brigman', 'Animal Clinic of Rapid City', '1655 S Valley Dr', 'Rapid City', 'SD', '(605) 342-1368');
@@ -154,7 +154,7 @@ CREATE TABLE `inventory` (
 
 -- 1 - general, 2 - grooming, 3 - training -- 
   PRIMARY KEY (`product_id`)
-) ENGINE=InnoDB AUTO_INCREMENT= 30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT= 30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 INSERT INTO `inventory` VALUES (1, 'Flea Shampoo', 13, 4.99, 15, 2);
 INSERT INTO `inventory` VALUES (2, 'Shampoo', 12, 2.99, 20, 2); 
 INSERT INTO `inventory` VALUES (3, 'Whitening Shampoo', 5, 6.99, 5, 2);
